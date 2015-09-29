@@ -26,6 +26,10 @@ when "new"
 	# byebug
 	puts "create new task: "
 when "complete"
+	tasks = Task.all
+	index = string.to_i
+	tasks[index - 1].complete = 1
+	tasks[index - 1].save
 		puts "set task to complete"
 when "delete"
 	puts "delete task"
