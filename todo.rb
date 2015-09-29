@@ -1,6 +1,7 @@
 require_relative 'config/application'
 
 require 'byebug'
+
 #add a task
 #delete a task
 #mark a task as done/complete
@@ -32,9 +33,9 @@ when "complete"
 	tasks[index - 1].save
 		puts "set task to complete"
 when "delete"
-	tasks = Task.all
+	tasks = Task.all   
 	index = string.to_i
-	tasks.destroy(index)
+	tasks.destroy(index)  #kean ho method Task.destroy(tasks[index -1].id)
 	puts "delete task"
 else
 	puts "Invalid Command"
